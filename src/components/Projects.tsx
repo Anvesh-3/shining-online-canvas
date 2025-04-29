@@ -19,14 +19,6 @@ const projectData = [
     tags: ["Python", "ML", "Predictive Analysis"],
     link: "#"
   },
-  {
-    id: 3,
-    title: "Data Analysis Internship - Zepto",
-    description: "Collected, cleaned, and analyzed large datasets from various sources. Built interactive dashboards and visualizations to monitor KPIs such as order fulfillment rate, delivery time, and inventory accuracy.",
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
-    tags: ["Python", "EDA", "ML Algorithms", "Tableau"],
-    link: "#"
-  }
 ];
 
 const Projects = () => {
