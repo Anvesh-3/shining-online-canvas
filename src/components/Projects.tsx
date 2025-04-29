@@ -5,34 +5,26 @@ import { Card, CardContent } from "@/components/ui/card";
 const projectData = [
   {
     id: 1,
-    title: "E-Commerce Platform",
-    description: "A full-featured online shopping platform with user authentication, product catalog, and payment processing.",
-    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
-    tags: ["React", "Node.js", "MongoDB"],
+    title: "Electric Vehicle Data Analysis",
+    description: "Conducted an in-depth analysis of EV adoption trends across the US using Python libraries. Examined key metrics including vehicle types, electric range, CAFV eligibility, and pricing variations.",
+    image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
+    tags: ["Python", "Pandas", "Matplotlib", "Seaborn"],
     link: "#"
   },
   {
     id: 2,
-    title: "Portfolio Website",
-    description: "A responsive portfolio website showcasing creative work and professional achievements.",
-    image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
-    tags: ["HTML", "CSS", "JavaScript"],
+    title: "Movie Recommendation System",
+    description: "Developed a system that analyzes user preferences and provides tailored movie suggestions using collaborative and content-based filtering techniques with machine learning algorithms.",
+    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
+    tags: ["Python", "ML", "Predictive Analysis"],
     link: "#"
   },
   {
     id: 3,
-    title: "Task Management App",
-    description: "A productivity application for organizing tasks, projects and team collaboration.",
-    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
-    tags: ["React", "Firebase", "Tailwind CSS"],
-    link: "#"
-  },
-  {
-    id: 4,
-    title: "Weather Dashboard",
-    description: "Real-time weather forecasting application with location-based searches and interactive maps.",
+    title: "Data Analysis Internship - Zepto",
+    description: "Collected, cleaned, and analyzed large datasets from various sources. Built interactive dashboards and visualizations to monitor KPIs such as order fulfillment rate, delivery time, and inventory accuracy.",
     image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
-    tags: ["JavaScript", "API", "CSS"],
+    tags: ["Python", "EDA", "ML Algorithms", "Tableau"],
     link: "#"
   }
 ];
@@ -50,7 +42,7 @@ const Projects = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projectData.map((project, index) => (
             <div 
               key={project.id} 

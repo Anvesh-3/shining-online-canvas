@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
-import { Download } from "lucide-react";
+import { Download, Mail, Phone, Linkedin, Github } from "lucide-react";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -27,7 +27,7 @@ const Navbar = () => {
     // Example of how to trigger a download:
     // const link = document.createElement('a');
     // link.href = '/path-to-your-resume.pdf';
-    // link.download = 'YourName-Resume.pdf';
+    // link.download = 'Anvesh-Tiwari-Resume.pdf';
     // document.body.appendChild(link);
     // link.click();
     // document.body.removeChild(link);
@@ -38,7 +38,7 @@ const Navbar = () => {
       isScrolled ? 'bg-white/90 backdrop-blur-md shadow-sm dark:bg-gray-900/90' : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-5 sm:px-10 flex justify-between items-center h-16 md:h-20">
-        <a href="#hero" className="text-lg font-semibold">Portfolio</a>
+        <a href="#hero" className="text-lg font-semibold">Anvesh Tiwari</a>
         
         <div className="hidden md:flex items-center space-x-8">
           <a href="#about" className="highlight">About</a>
@@ -76,7 +76,7 @@ const MobileNav = () => {
     // Example of how to trigger a download:
     // const link = document.createElement('a');
     // link.href = '/path-to-your-resume.pdf';
-    // link.download = 'YourName-Resume.pdf';
+    // link.download = 'Anvesh-Tiwari-Resume.pdf';
     // document.body.appendChild(link);
     // link.click();
     // document.body.removeChild(link);

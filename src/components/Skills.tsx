@@ -2,25 +2,25 @@
 import { Progress } from "@/components/ui/progress";
 
 const skillsData = [
-  { name: "HTML/CSS", level: 95 },
-  { name: "JavaScript", level: 90 },
-  { name: "React", level: 85 },
-  { name: "TypeScript", level: 80 },
-  { name: "Node.js", level: 75 },
-  { name: "UI/UX Design", level: 85 },
-  { name: "Responsive Design", level: 95 },
-  { name: "Database Management", level: 70 }
+  { name: "Java", level: 90 },
+  { name: "Python", level: 85 },
+  { name: "HTML/CSS", level: 80 },
+  { name: "SQL", level: 85 },
+  { name: "Data Analysis", level: 90 },
+  { name: "Tableau/Power BI", level: 85 },
+  { name: "Excel", level: 90 },
+  { name: "Problem Solving", level: 85 }
 ];
 
 const toolsData = [
-  { name: "VS Code", category: "Editor" },
-  { name: "Git", category: "Version Control" },
-  { name: "Figma", category: "Design" },
-  { name: "Adobe XD", category: "Design" },
-  { name: "Photoshop", category: "Design" },
-  { name: "Webpack", category: "Build Tool" },
-  { name: "Docker", category: "DevOps" },
-  { name: "AWS", category: "Cloud" }
+  { name: "MySQL", category: "Database" },
+  { name: "Tableau", category: "Data Visualization" },
+  { name: "Power BI", category: "Data Visualization" },
+  { name: "Excel", category: "Data Analysis" },
+  { name: "Android Studio", category: "Development" },
+  { name: "VMware", category: "Virtualization" },
+  { name: "Ubuntu", category: "Operating System" },
+  { name: "Jupyter", category: "Data Science" }
 ];
 
 const Skills = () => {
@@ -30,7 +30,7 @@ const Skills = () => {
         <div className="text-center mb-12 fade-in">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Skills & Technologies</h2>
           <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            I specialize in front-end development with a strong foundation in back-end technologies.
+            I specialize in data analysis with a strong foundation in programming and visualization tools.
             Here's a breakdown of my technical skills and tools I use.
           </p>
         </div>
