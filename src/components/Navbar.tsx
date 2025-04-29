@@ -1,6 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
+import { Download } from "lucide-react";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -20,18 +21,38 @@ const Navbar = () => {
     };
   }, []);
 
+  const handleDownloadResume = () => {
+    // In a real implementation, this would point to an actual PDF file
+    alert("Resume download functionality would be connected to an actual PDF file");
+    // Example of how to trigger a download:
+    // const link = document.createElement('a');
+    // link.href = '/path-to-your-resume.pdf';
+    // link.download = 'YourName-Resume.pdf';
+    // document.body.appendChild(link);
+    // link.click();
+    // document.body.removeChild(link);
+  };
+
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-white/90 backdrop-blur-md shadow-sm' : 'bg-transparent'
+      isScrolled ? 'bg-white/90 backdrop-blur-md shadow-sm dark:bg-gray-900/90' : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-5 sm:px-10 flex justify-between items-center h-16 md:h-20">
         <a href="#hero" className="text-lg font-semibold">Portfolio</a>
         
-        <div className="hidden md:flex space-x-8">
+        <div className="hidden md:flex items-center space-x-8">
           <a href="#about" className="highlight">About</a>
           <a href="#projects" className="highlight">Projects</a>
           <a href="#skills" className="highlight">Skills</a>
           <a href="#contact" className="highlight">Contact</a>
+          <Button 
+            variant="outline" 
+            size="sm"
+            className="flex items-center gap-2"
+            onClick={handleDownloadResume}
+          >
+            <Download size={16} /> Resume
+          </Button>
         </div>
         
         <div className="md:hidden">
@@ -47,6 +68,18 @@ const MobileNav = () => {
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+  };
+
+  const handleDownloadResume = () => {
+    // In a real implementation, this would point to an actual PDF file
+    alert("Resume download functionality would be connected to an actual PDF file");
+    // Example of how to trigger a download:
+    // const link = document.createElement('a');
+    // link.href = '/path-to-your-resume.pdf';
+    // link.download = 'YourName-Resume.pdf';
+    // document.body.appendChild(link);
+    // link.click();
+    // document.body.removeChild(link);
   };
 
   return (
@@ -65,11 +98,22 @@ const MobileNav = () => {
       </Button>
 
       {isOpen && (
-        <div className="absolute top-16 left-0 right-0 bg-white shadow-md py-4 px-5 flex flex-col space-y-4">
+        <div className="absolute top-16 left-0 right-0 bg-white dark:bg-gray-900 shadow-md py-4 px-5 flex flex-col space-y-4">
           <a href="#about" className="block py-2" onClick={() => setIsOpen(false)}>About</a>
           <a href="#projects" className="block py-2" onClick={() => setIsOpen(false)}>Projects</a>
           <a href="#skills" className="block py-2" onClick={() => setIsOpen(false)}>Skills</a>
           <a href="#contact" className="block py-2" onClick={() => setIsOpen(false)}>Contact</a>
+          <Button 
+            variant="outline" 
+            size="sm"
+            className="flex items-center gap-2 w-full justify-center"
+            onClick={() => {
+              handleDownloadResume();
+              setIsOpen(false);
+            }}
+          >
+            <Download size={16} /> Resume
+          </Button>
         </div>
       )}
     </div>

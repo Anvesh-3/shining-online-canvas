@@ -1,5 +1,6 @@
 
 import { Button } from "@/components/ui/button";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 const Hero = () => {
   return (
@@ -7,23 +8,32 @@ const Hero = () => {
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-100 via-gray-100 to-gray-200 dark:from-gray-900 dark:via-gray-900 dark:to-black"></div>
       
       <div className="section-padding text-center md:text-left">
-        <div className="max-w-3xl fade-in" style={{ animationDelay: '0.2s' }}>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-4">
-            Hello, I'm <span className="text-primary">Your Name</span>
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-700 dark:text-gray-300 mb-8">
-            Web Developer & Designer
-          </p>
-          <p className="text-lg text-gray-600 dark:text-gray-400 mb-8 max-w-2xl">
-            I create beautiful, functional websites and applications that help businesses achieve their goals.
-          </p>
-          <div className="space-x-4">
-            <Button asChild size="lg">
-              <a href="#projects">View My Work</a>
-            </Button>
-            <Button variant="outline" size="lg" asChild>
-              <a href="#contact">Contact Me</a>
-            </Button>
+        <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+          <div className="flex justify-center md:order-2 mb-6 md:mb-0">
+            <Avatar className="h-36 w-36 md:h-48 md:w-48 border-4 border-primary/20 shadow-lg">
+              <AvatarImage src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&w=300" alt="Profile Photo" />
+              <AvatarFallback>YN</AvatarFallback>
+            </Avatar>
+          </div>
+          
+          <div className="max-w-3xl fade-in md:order-1" style={{ animationDelay: '0.2s' }}>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-4">
+              Hello, I'm <span className="text-primary">Your Name</span>
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-700 dark:text-gray-300 mb-8">
+              Web Developer & Designer
+            </p>
+            <p className="text-lg text-gray-600 dark:text-gray-400 mb-8 max-w-2xl">
+              I create beautiful, functional websites and applications that help businesses achieve their goals.
+            </p>
+            <div className="space-x-4">
+              <Button asChild size="lg">
+                <a href="#projects">View My Work</a>
+              </Button>
+              <Button variant="outline" size="lg" asChild>
+                <a href="#contact">Contact Me</a>
+              </Button>
+            </div>
           </div>
         </div>
       </div>
