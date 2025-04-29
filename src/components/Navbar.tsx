@@ -43,6 +43,7 @@ const Navbar = () => {
         <div className="hidden md:flex items-center space-x-8">
           <a href="#about" className="highlight">About</a>
           <a href="#projects" className="highlight">Projects</a>
+          <a href="#experience" className="highlight">Experience</a>
           <a href="#skills" className="highlight">Skills</a>
           <a href="#contact" className="highlight">Contact</a>
           <Button 
@@ -101,6 +102,7 @@ const MobileNav = () => {
         <div className="absolute top-16 left-0 right-0 bg-white dark:bg-gray-900 shadow-md py-4 px-5 flex flex-col space-y-4">
           <a href="#about" className="block py-2" onClick={() => setIsOpen(false)}>About</a>
           <a href="#projects" className="block py-2" onClick={() => setIsOpen(false)}>Projects</a>
+          <a href="#experience" className="block py-2" onClick={() => setIsOpen(false)}>Experience</a>
           <a href="#skills" className="block py-2" onClick={() => setIsOpen(false)}>Skills</a>
           <a href="#contact" className="block py-2" onClick={() => setIsOpen(false)}>Contact</a>
           <Button 
