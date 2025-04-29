@@ -17,7 +17,7 @@ const Hero = () => {
           <div className="md:order-2 flex justify-center">
             <Avatar className="h-36 w-36 md:h-48 md:w-48 border-4 border-primary/20 shadow-lg">
               <AvatarImage
-                src="https://drive.google.com/uc?export=view&id=1YC4BfIFPkNwLi-s8Y6bL4QGaCbjhSEj2"
+                src="public/WhatsApp Image 2025-04-30 at 01.32.54_0b86c255.jpg"
                 alt="Anvesh Tiwari"
                 loading="lazy"
                 onError={(e) => {
