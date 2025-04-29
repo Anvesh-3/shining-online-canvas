@@ -19,6 +19,11 @@ const Hero = () => {
               <AvatarImage
                 src="https://drive.google.com/uc?export=view&id=1YC4BfIFPkNwLi-s8Y6bL4QGaCbjhSEj2"
                 alt="Anvesh Tiwari"
+                loading="lazy"
+                onError={(e) => {
+                  // fallback if Drive link fails
+                  e.currentTarget.src = "https://via.placeholder.com/150?text=Anvesh";
+                }}
               />
               <AvatarFallback>AT</AvatarFallback>
             </Avatar>
