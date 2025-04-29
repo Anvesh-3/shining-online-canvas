@@ -11,7 +11,7 @@ const Hero = () => {
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
           <div className="flex justify-center md:order-2 mb-6 md:mb-0">
             <Avatar className="h-36 w-36 md:h-48 md:w-48 border-4 border-primary/20 shadow-lg">
-              <AvatarImage src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&w=300" alt="Profile Photo" />
+              <AvatarImage src="https://drive.google.com/file/d/1YC4BfIFPkNwLi-s8Y6bL4QGaCbjhSEj2/view?usp=sharing" alt="Profile Photo" />
               <AvatarFallback>AT</AvatarFallback>
             </Avatar>
           </div>
