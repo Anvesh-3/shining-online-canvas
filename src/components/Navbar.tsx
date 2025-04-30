@@ -1,26 +1,36 @@
+
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
-import { Download } from "lucide-react";
+import { Download, Mail, Phone, Linkedin, Github } from "lucide-react";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
     };
 
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, []);
 
   const handleDownloadResume = () => {
-    const link = document.createElement('a');
-    link.href = 'https://drive.google.com/uc?export=download&id=17T2SynMX5ykUo93GaFRQK8nitqYQnRsp';
-    link.download = 'Anvesh-Tiwari-Resume.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    // In a real implementation, this would point to an actual PDF file
+    alert("Resume download functionality would be connected to an actual PDF file");
+    // Example of how to trigger a download:
+    // const link = document.createElement('a');
+    // link.href = '/path-to-your-resume.pdf';
+    // link.download = 'Anvesh-Tiwari-Resume.pdf';
+    // document.body.appendChild(link);
+    // link.click();
+    // document.body.removeChild(link);
   };
 
   return (
@@ -47,17 +57,31 @@ const Navbar = () => {
         </div>
         
         <div className="md:hidden">
-          <MobileNav handleDownloadResume={handleDownloadResume} />
+          <MobileNav />
         </div>
       </div>
     </nav>
   );
 };
 
-const MobileNav = ({ handleDownloadResume }: { handleDownloadResume: () => void }) => {
+const MobileNav = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleMenu = () => setIsOpen(!isOpen);
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const handleDownloadResume = () => {
+    // In a real implementation, this would point to an actual PDF file
+    alert("Resume download functionality would be connected to an actual PDF file");
+    // Example of how to trigger a download:
+    // const link = document.createElement('a');
+    // link.href = '/path-to-your-resume.pdf';
+    // link.download = 'Anvesh-Tiwari-Resume.pdf';
+    // document.body.appendChild(link);
+    // link.click();
+    // document.body.removeChild(link);
+  };
 
   return (
     <div>
